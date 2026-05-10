@@ -21,9 +21,8 @@ int main() {
     outtextxy(x, y - 20, "Original");
     bar3d(x, y, x + w, y + h, depth, 1);
 
-    // Input angle
-    printf("Enter rotation angle: ");
-    scanf("%f", &angle);
+    angle=180;
+    
 
     rad = angle * M_PI / 180;
 
@@ -35,7 +34,7 @@ int main() {
     int offset = 200;
 
     // Draw rotated-looking cube
-    outtextxy(x + offset, y - 20, "Rotated");
+    outtextxy(x + offset, y - 20, "Rotated 180 Deg");
     bar3d(x + offset, y, x + offset + new_w, y + new_h, depth, 1);
 
     getch();
