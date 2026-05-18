@@ -1,7 +1,7 @@
 /*
  * @author Theerthananda
  */
-
+//Input must start from 0
 #include <stdio.h>
 #include <limits.h>
 #include <stdbool.h>
@@ -91,7 +91,6 @@ int main() {
 
 
      /*
-     
     printf("Enter adjacency matrix (0 if no edge):\n");
     for (int i = 0; i < V; i++) {
         for (int j = 0; j < V; j++) {
@@ -99,7 +98,7 @@ int main() {
             scanf("%d", &graph[i][j]);
         }
     }    
-        */
+    */
     
     printf("Enter %d edges :\n",edges);
     for(int i=0;i<edges;i++){

@@ -16,11 +16,11 @@ class AverageArray
             nums[i] = int.Parse(Console.ReadLine());
         }
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < n; i++)
         {
             sum = sum + nums[i];
         }
-        avg = sum / 10;
+        avg = sum / n;
 
         Console.WriteLine("Average: " + avg);
 
