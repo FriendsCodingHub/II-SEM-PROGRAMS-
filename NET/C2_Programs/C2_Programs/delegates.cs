@@ -39,7 +39,5 @@ class delegates
 
         cal = c.Multiply;
         cal(10, 5);
-
-        Console.ReadLine();
     }
 }

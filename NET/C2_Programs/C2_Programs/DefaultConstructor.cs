@@ -4,7 +4,6 @@ class MyClass
 {
     public int x;
 
-    // Constructor
     public MyClass()
     {
         x = 10;
@@ -18,6 +17,6 @@ class DefaultConstructor
         MyClass t1 = new MyClass();
         MyClass t2 = new MyClass();
 
-        Console.WriteLine(t1.x + " " + t2.x);
+        Console.WriteLine(t1.x + "\n " + t2.x);
     }
 }

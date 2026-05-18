@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>ConstructorOverloadingProgram.ConstructorOverloadingDemo</StartupObject>
+    <StartupObject>Jagged</StartupObject>
   </PropertyGroup>
 
 </Project>
