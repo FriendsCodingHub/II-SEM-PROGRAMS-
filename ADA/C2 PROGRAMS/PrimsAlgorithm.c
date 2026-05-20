@@ -1,7 +1,3 @@
-/*
- * @author Theerthananda
- */
-//Input must start from 0
 #include <stdio.h>
 #include <limits.h>
 #include <stdbool.h>
@@ -10,60 +6,72 @@
 
 int V;
 
-int minKey(int key[], bool mstSet[]) {
+int minKey(int key[], bool mstSet[])
+{
     int min = INT_MAX;
     int min_index = -1;
 
-    for (int i = 0; i < V; i++) {
-        if (!mstSet[i] && key[i] < min) {
+    for(int i=1; i<=V; i++)
+    {
+        if(!mstSet[i] && key[i] < min)
+        {
             min = key[i];
             min_index = i;
         }
     }
+
     return min_index;
 }
 
-
-void printMST(int parent[], int graph[MAX][MAX]) {
+void printMST(int parent[], int graph[MAX][MAX])
+{
     int totalCost = 0;
 
     printf("\nEdge \tWeight\n");
-    for (int i = 1; i < V; i++) {
-        printf("%d - %d \t%d\n", parent[i], i, graph[i][parent[i]]);
+
+    for(int i=2; i<=V; i++)
+    {
+        printf("%d - %d \t%d\n",
+               parent[i], i,
+               graph[i][parent[i]]);
+
         totalCost += graph[i][parent[i]];
     }
 
     printf("Total Cost of MST = %d\n", totalCost);
 }
 
-
-void primMST(int graph[MAX][MAX]) {
+void primMST(int graph[MAX][MAX])
+{
     int parent[MAX];
     int key[MAX];
-    bool mstSet[MAX];
+    bool mstSet[MAX];                                          
 
-   
-    for (int i = 0; i < V; i++) {
+    for(int i=1; i<=V; i++)
+    {
         key[i] = INT_MAX;
         mstSet[i] = false;
         parent[i] = -1;
     }
 
-    key[0] = 0; // Start from vertex 0
+    key[1] = 0;
 
-   
-    for (int count = 0; count < V - 1; count++) {
+    for(int count=1; count<V; count++)
+    {
         int u = minKey(key, mstSet);
 
-        if (u == -1) {
+        if(u == -1)
+        {
             printf("Graph is not connected!\n");
             return;
         }
 
         mstSet[u] = true;
 
-        for (int j = 0; j < V; j++) {
-            if (graph[u][j] != 0 && !mstSet[j] && graph[u][j] < key[j]) {
+        for(int j=1; j<=V; j++)
+        {
+            if(graph[u][j] != 0 && !mstSet[j] && graph[u][j] < key[j])
+            {
                 parent[j] = u;
                 key[j] = graph[u][j];
             }
@@ -73,41 +81,36 @@ void primMST(int graph[MAX][MAX]) {
     printMST(parent, graph);
 }
 
+int main()
+{
+    int graph[MAX][MAX], edges, v, u, cost;
 
-int main() {
-    int graph[MAX][MAX],edges,v,u,cost;
-    
     printf("Enter number of vertices: ");
     scanf("%d", &V);
 
-    printf("Enter number of edges :");
-    scanf("%d",&edges);
+    printf("Enter number of edges: ");
+    scanf("%d", &edges);
 
-    for(int i=0;i<V;i++){
-        for(int j=0;j<V;j++){
-            graph[i][j]=0;
+    for(int i=1; i<=V; i++)
+    {
+        for(int j=1; j<=V; j++)
+        {
+            graph[i][j] = 0;
         }
     }
 
+    printf("Enter %d edges:\n", edges);
 
-     /*
-    printf("Enter adjacency matrix (0 if no edge):\n");
-    for (int i = 0; i < V; i++) {
-        for (int j = 0; j < V; j++) {
-            printf("Edge %d - %d: ", i, j);
-            scanf("%d", &graph[i][j]);
-        }
-    }    
-    */
-    
-    printf("Enter %d edges :\n",edges);
-    for(int i=0;i<edges;i++){
-        printf("Enter edges :");
-        scanf("%d %d",&v,&u);
-        printf("\nEnter cost of edge :");
-        scanf("%d",&cost);
-        graph[u][v]=cost;
-        graph[v][u]=cost;
+    for(int i=1; i<=edges; i++)
+    {
+        printf("Enter edge: ");
+        scanf("%d%d", &u, &v);
+
+        printf("Enter cost: ");
+        scanf("%d", &cost);
+
+        graph[u][v] = cost;
+        graph[v][u] = cost;
     }
 
     primMST(graph);
