@@ -36,19 +36,6 @@ int main()
         a[u][v]=cost;
     }
 
-    // Display adjacency matrix
-    printf("\nAdjacency Matrix\n");
-
-    for(int i=1; i<=n; i++)
-    {
-        for(int j=1; j<=n; j++)
-        {
-            printf("%d\t",a[i][j]);
-        }
-
-        printf("\n");
-    }
-
     // Floyd Warshall Logic
     for(int k=1; k<=n; k++)
     {
