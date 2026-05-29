@@ -34,3 +34,8 @@ void MaxAndMinArray(int a[], int n) {
     printf("Max element = %d\n", max);
     printf("Min element = %d\n", min);
 }
+
+
+
+
+
