@@ -1,0 +1,26 @@
+﻿using System;
+
+class VerbatimStringDemo
+{
+    static void Main()
+    {
+        string path1 = @"C:\Users\Programmer\Files";
+        Console.WriteLine("Verbatim Path: " + path1);
+
+        string MultilineString = @"This is a multiline
+string that spans multiple lines";
+        Console.WriteLine(MultilineString);
+
+        string path3 = @"D:\Projects\CSharp\VerbatimStringDemo";
+        Console.WriteLine("Project Path: " + path3);
+
+        string path4 = @"C:\Users\Programmer\Documents\file.txt";
+        Console.WriteLine("File Path: " + path4);
+
+        string message = @"File saved at C:\Temp\output.txt";
+        Console.WriteLine("Message: " + message);
+
+        string url = @"https://www.example.com/files";
+        Console.WriteLine("URL: " + url);
+    }
+}
