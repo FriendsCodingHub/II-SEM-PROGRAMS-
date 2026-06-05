@@ -83,7 +83,7 @@ $$
 T(n)=\frac{n^2-n}{2}
 $$
 
-Ignoring constant \(\frac{1}{2}\) and lower-order term \(-n\),
+Ignoring constant and lower-order term \(-n\),
 
 $$
 T(n)=O(n^2)

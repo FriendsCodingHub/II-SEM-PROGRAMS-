@@ -62,13 +62,13 @@ $$
 
 ### Time Complexity
 
-For an \(r \times c\) matrix:
+For an r  c general matrix:
 
 $$
 O(rc)
 $$
 
-For an \(n \times n\) matrix:
+For an square matrix:
 
 $$
 O(n^2)
