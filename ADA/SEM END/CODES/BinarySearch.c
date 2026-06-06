@@ -45,3 +45,4 @@ int BinarySearch(int a[], int n, int data) {
 
     return -1;
 }
+
