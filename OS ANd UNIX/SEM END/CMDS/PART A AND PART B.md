@@ -423,197 +423,124 @@ cal --version
 
 Displays the version of cal command.
 
-# 4. Write a UNIX command to display time with various options.
+# 4. Write a UNIX command to use BC commands for simple Arithmetic calculation and change
+# a) Binary to Decimal
+# b) Decimal to Octal
 
-## Command: date
+## Command
+
+```bash
+bc
+```
+
+## Description
+
+The `bc` (Basic Calculator) command is an interactive calculator used to perform arithmetic calculations and number system conversions.
+
+---
+
+## Simple Arithmetic Calculations
+
+### Addition
+
+```bash
+10 + 20
+```
+
+**Output:**
+```text
+30
+```
+
+---
+
+### Subtraction
+
+```bash
+50 - 20
+```
+
+**Output:**
+```text
+30
+```
+
+---
+
+### Multiplication
+
+```bash
+10 * 5
+```
+
+**Output:**
+```text
+50
+```
+
+---
+
+### Division
+
+```bash
+20 / 4
+```
+
+**Output:**
+```text
+5
+```
+
+---
+
+## a) Binary to Decimal Conversion
+
+```bash
+ibase=2
+1010
+```
+
+**Output:**
+```text
+10
+```
 
 **Description:**
-The `date` command is used to display the current system time in various formats.
+`ibase=2` sets the input base to binary.
 
 ---
 
-## Common Time Format Options
+## b) Decimal to Octal Conversion
 
-| Option | Description |
+```bash
+obase=8
+10
+```
+
+**Output:**
+```text
+12
+```
+
+**Description:**
+`obase=8` sets the output base to octal.
+
+---
+
+## Common BC Commands
+
+| Command | Description |
 |----------|-------------|
-| %H | Hour (00-23) |
-| %I | Hour (01-12) |
-| %M | Minutes (00-59) |
-| %S | Seconds (00-59) |
-| %p | AM/PM |
-| %r | Time in 12-hour format |
-| %R | Time in HH:MM format |
-| %T | Time in HH:MM:SS format |
-| %X | Local time representation |
-| %Z | Time zone |
-| %z | UTC offset |
-| %N | Nanoseconds |
-| %s | Seconds since Epoch |
-| %k | Hour (0-23) |
-| %l | Hour (1-12) |
-
----
-
-## Executable Commands
-
-### 1. Display Current Time
-
-```bash
-date +"%T"
-```
-
-Displays current time in HH:MM:SS format.
-
----
-
-### 2. Display Time in HH:MM Format
-
-```bash
-date +"%R"
-```
-
-Displays hours and minutes.
-
----
-
-### 3. Display Time in 12-Hour Format
-
-```bash
-date +"%r"
-```
-
-Displays time with AM/PM.
-
----
-
-### 4. Display Hour Only
-
-```bash
-date +"%H"
-```
-
-Displays current hour.
-
----
-
-### 5. Display Minutes Only
-
-```bash
-date +"%M"
-```
-
-Displays current minutes.
-
----
-
-### 6. Display Seconds Only
-
-```bash
-date +"%S"
-```
-
-Displays current seconds.
-
----
-
-### 7. Display Hour and Minutes
-
-```bash
-date +"%H:%M"
-```
-
-Displays hour and minutes.
-
----
-
-### 8. Display Hour, Minutes and Seconds
-
-```bash
-date +"%H:%M:%S"
-```
-
-Displays complete time.
-
----
-
-### 9. Display Time with AM/PM
-
-```bash
-date +"%I:%M:%S %p"
-```
-
-Displays time in 12-hour format with AM/PM.
-
----
-
-### 10. Display Current Time Zone
-
-```bash
-date +"%Z"
-```
-
-Displays system time zone.
-
----
-
-### 11. Display UTC Offset
-
-```bash
-date +"%z"
-```
-
-Displays UTC offset from GMT.
-
----
-
-### 12. Display Local Time Representation
-
-```bash
-date +"%X"
-```
-
-Displays time according to locale settings.
-
----
-
-### 13. Display Hour with Time Zone
-
-```bash
-date +"%H:%M:%S %Z"
-```
-
-Displays time along with time zone.
-
----
-
-### 14. Display Epoch Time
-
-```bash
-date +"%s"
-```
-
-Displays seconds elapsed since January 1, 1970.
-
----
-
-### 15. Display Nanoseconds
-
-```bash
-date +"%N"
-```
-
-Displays nanoseconds.
-
----
-
-### 16. Display Complete Time Information
-
-```bash
-date +"%I:%M:%S %p %Z"
-```
-
-Displays time in 12-hour format along with AM/PM and time zone.
-
+| ibase=2 | Sets input base to binary |
+| ibase=8 | Sets input base to octal |
+| ibase=10 | Sets input base to decimal |
+| ibase=16 | Sets input base to hexadecimal |
+| obase=2 | Converts output to binary |
+| obase=8 | Converts output to octal |
+| obase=10 | Converts output to decimal |
+| obase=16 | Converts output to hexadecimal |
+| scale=2 | Sets decimal precision |
+| quit | Exits BC calculator |
 
 # 5. Write a UNIX command to display hours, minutes & seconds together.
 
@@ -665,17 +592,19 @@ date +"%T"
 
 `%T` is equivalent to `%H:%M:%S`.
 
-# 6. Write a UNIX command to display list of users who are currently using Unix.
+# 6. Write a UNIX command to display list of users who are currently using Unix and perform all LS commands.
 
-## Command
+## Display List of Users Currently Using UNIX
+
+### Command
 
 ```bash
 who
 ```
 
-## Description
+### Description
 
-The `who` command displays the list of users who are currently logged into and using the UNIX system.
+The `who` command displays the list of users who are currently logged into the UNIX system.
 
 ---
 
@@ -699,19 +628,195 @@ who -H
 **Description:**
 Displays the list of logged-in users along with column headings.
 
-## Example
+---
+
+## LS Commands
+
+### Command
 
 ```bash
-who -H
+ls
 ```
 
-## Sample Output
+### Description
 
-```text
-NAME     LINE     TIME
-student1 pts/0    Jun 03 10:15
-student2 pts/1    Jun 03 11:20
+Displays files and directories in the current directory.
+
+---
+
+## Option: -a
+
+```bash
+ls -a
 ```
+
+**Description:**
+Displays all files including hidden files.
+
+---
+
+## Option: -A
+
+```bash
+ls -A
+```
+
+**Description:**
+Displays all files except '.' and '..'.
+
+---
+
+## Option: -l
+
+```bash
+ls -l
+```
+
+**Description:**
+Displays files and directories in long listing format.
+
+---
+
+## Option: -la
+
+```bash
+ls -la
+```
+
+**Description:**
+Displays all files including hidden files in long listing format.
+
+---
+
+## Option: -R
+
+```bash
+ls -R
+```
+
+**Description:**
+Displays files and directories recursively including subdirectories.
+
+---
+
+## Option: -r
+
+```bash
+ls -r
+```
+
+**Description:**
+Displays files in reverse order.
+
+---
+
+## Option: -t
+
+```bash
+ls -t
+```
+
+**Description:**
+Displays files sorted by modification time.
+
+---
+
+## Option: -i
+
+```bash
+ls -i
+```
+
+**Description:**
+Displays inode numbers of files.
+
+---
+
+## Option: -s
+
+```bash
+ls -s
+```
+
+**Description:**
+Displays file sizes in blocks.
+
+---
+
+## Option: -h
+
+```bash
+ls -h
+```
+
+**Description:**
+Displays file sizes in human-readable format.
+
+---
+
+## Option: -F
+
+```bash
+ls -F
+```
+
+**Description:**
+Appends symbols to identify file types.
+
+---
+
+## Option: -d
+
+```bash
+ls -d
+```
+
+**Description:**
+Displays directory names instead of their contents.
+
+---
+
+## Option: -1
+
+```bash
+ls -1
+```
+
+**Description:**
+Displays one file per line.
+
+---
+
+## Option: -m
+
+```bash
+ls -m
+```
+
+**Description:**
+Displays files separated by commas.
+
+---
+
+## Common LS Options
+
+| Option | Description |
+|----------|-------------|
+| ls | Lists files and directories |
+| ls -a | Displays all files including hidden files |
+| ls -A | Displays all files except . and .. |
+| ls -l | Displays files in long listing format |
+| ls -la | Displays all files in long listing format |
+| ls -R | Displays files and directories recursively |
+| ls -r | Displays files in reverse order |
+| ls -t | Displays files sorted by modification time |
+| ls -i | Displays inode numbers |
+| ls -s | Displays file sizes in blocks |
+| ls -h | Displays file sizes in human-readable format |
+| ls -F | Appends symbols to identify file types |
+| ls -d | Displays directory names only |
+| ls -1 | Displays one file per line |
+| ls -m | Displays files separated by commas |
 
 # 7. Write a UNIX command to display your system details & user name.
 
@@ -1049,7 +1154,7 @@ Ctrl + b
 
 Scrolls backward by one full screen.
 
-# 12. Write a common symbolic chmod commands.
+# 12. Demonstrate the Different File Permission Commands.
 
 ## Command
 
@@ -1063,24 +1168,24 @@ The `chmod` (Change Mode) command is used to change file and directory permissio
 
 ---
 
-## Symbols Used in chmod
+# Symbolic Method
 
-| Symbol | Meaning |
-|----------|---------|
+## Permission Symbols
+
+| Symbol | Description |
+|----------|-------------|
 | u | User (Owner) |
 | g | Group |
 | o | Others |
 | a | All Users |
-| + | Add Permission |
-| - | Remove Permission |
-| = | Assign Permission |
 | r | Read Permission |
 | w | Write Permission |
 | x | Execute Permission |
+| + | Add Permission |
+| - | Remove Permission |
+| = | Assign Permission |
 
 ---
-
-## Common Symbolic chmod Commands
 
 ### Add Read Permission to User
 
@@ -1088,19 +1193,11 @@ The `chmod` (Change Mode) command is used to change file and directory permissio
 chmod u+r file.txt
 ```
 
-**Description:** Adds read permission for the file owner.
-
----
-
 ### Add Write Permission to User
 
 ```bash
 chmod u+w file.txt
 ```
-
-**Description:** Adds write permission for the file owner.
-
----
 
 ### Add Execute Permission to User
 
@@ -1108,39 +1205,11 @@ chmod u+w file.txt
 chmod u+x file.txt
 ```
 
-**Description:** Adds execute permission for the file owner.
-
----
-
 ### Remove Read Permission from User
 
 ```bash
 chmod u-r file.txt
 ```
-
-**Description:** Removes read permission from the owner.
-
----
-
-### Remove Write Permission from Group
-
-```bash
-chmod g-w file.txt
-```
-
-**Description:** Removes write permission from the group.
-
----
-
-### Add Read Permission to Others
-
-```bash
-chmod o+r file.txt
-```
-
-**Description:** Adds read permission for others.
-
----
 
 ### Add Read and Write Permission to Group
 
@@ -1148,29 +1217,17 @@ chmod o+r file.txt
 chmod g+rw file.txt
 ```
 
-**Description:** Adds read and write permissions to the group.
-
----
-
-### Give Read Permission to All Users
+### Add Read Permission to Others
 
 ```bash
-chmod a+r file.txt
+chmod o+r file.txt
 ```
 
-**Description:** Adds read permission to all users.
-
----
-
-### Give Execute Permission to All Users
+### Add Execute Permission to All Users
 
 ```bash
 chmod a+x file.txt
 ```
-
-**Description:** Adds execute permission to all users.
-
----
 
 ### Assign Read, Write and Execute Permission to User
 
@@ -1178,8 +1235,59 @@ chmod a+x file.txt
 chmod u=rwx file.txt
 ```
 
-**Description:** Assigns read, write and execute permissions to the owner.
+---
 
+# Numeric (Octal) Method
+
+## Permission Values
+
+| Value | Permission |
+|---------|------------|
+| 4 | Read (r) |
+| 2 | Write (w) |
+| 1 | Execute (x) |
+| 7 | rwx |
+| 6 | rw- |
+| 5 | r-x |
+| 4 | r-- |
+
+---
+
+### Owner Full Permission
+
+```bash
+chmod 700 file.txt
+```
+
+### Owner Read/Write, Others Read Only
+
+```bash
+chmod 644 file.txt
+```
+
+### Owner Full Permission, Others Read & Execute
+
+```bash
+chmod 755 file.txt
+```
+
+### Full Permission to Everyone
+
+```bash
+chmod 777 file.txt
+```
+
+### Owner Read/Write/Execute, Group Read/Execute, Others No Permission
+
+```bash
+chmod 750 file.txt
+```
+
+### Owner Read/Write, Group Read, Others No Permission
+
+```bash
+chmod 640 file.txt
+```
 
 # 13. Write undo commands and which command is used to delete 5 lines.
 
