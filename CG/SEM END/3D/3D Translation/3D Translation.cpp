@@ -7,8 +7,8 @@ int main() {
     initgraph(&gd, &gm, "C:\\Dev-Cpp\\MinGW32\\lib");
 
     int x1 = 150, y1 = 150;
-    int x2 = 220, y2 = 220;
-    int depth = 30;
+    int x2 = 210, y2 = 210;
+    int depth = 40;
 
     // Original cube
     setcolor(WHITE);
