@@ -20,7 +20,7 @@ string that spans multiple lines";
         string message = @"File saved at C:\Temp\output.txt";
         Console.WriteLine("Message: " + message);
 
-        string url = @"https://www.example.com/files";
+        string url = "https://www.example.com/files";
         Console.WriteLine("URL: " + url);
     }
 }
