@@ -22,9 +22,9 @@ int main() {
     int t3x = (m12x + m13x) / 2, t3y = (m12y + m13y) / 2;
 
     // Left
-    int l1x = (x2 + m12x) / 2; l1y = (y2 + m12y) / 2;
-    int l2x = (x2 + m23x) / 2; l2y = (y2 + m23y) / 2;
-    int l3x = (m12x + m23x) / 2;l3y = (m12y + m23y) / 2;
+    int l1x = (x2 + m12x) / 2, l1y = (y2 + m12y) / 2;
+    int l2x = (x2 + m23x) / 2, l2y = (y2 + m23y) / 2;
+    int l3x = (m12x + m23x) / 2,l3y = (m12y + m23y) / 2;
 
     // Right
     int r1x = (x3 + m13x) / 2, r1y = (y3 + m13y) / 2;

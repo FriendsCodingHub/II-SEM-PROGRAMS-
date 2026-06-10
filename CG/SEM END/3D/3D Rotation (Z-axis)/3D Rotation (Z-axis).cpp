@@ -34,6 +34,7 @@ int main() {
     int offset = 200;
 
     // Draw rotated-looking cube
+    delay(2000);
     outtextxy(x1 + offset, y1 - 20, "Rotated 180 Deg");
     bar3d(x1 + offset, y1,offset + new_x2,new_y2, depth, 1);
 

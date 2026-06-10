@@ -14,6 +14,7 @@ int main() {
         sprintf(str, "%d", i);
         outtextxy(300, y, str);
         y += 30;
+        
     }
 
     getch();

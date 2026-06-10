@@ -19,7 +19,7 @@ int main() {
     int ty = 100;
 
     // Translated cube
-    setcolor(LIGHTGRAY);
+    setcolor(GREEN);
     bar3d(x1 + tx, y1 + ty, x2 + tx, y2 + ty, depth, 1);
 
     getch();
