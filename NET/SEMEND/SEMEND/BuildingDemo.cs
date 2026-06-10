@@ -2,9 +2,9 @@
 
 class Building
 {
-    public int Floors;     // number of floors
-    public int Area;       // total area
-    public int Occupants;  // number of people
+    public int Floors;
+    public int Area;
+    public int Occupants;
 
     // Parameterized constructor
     public Building(int f, int a, int o)
@@ -34,7 +34,13 @@ class BuildingDemo
         Building house = new Building(2, 2500, 4);
         Building office = new Building(3, 4200, 25);
 
-        Console.WriteLine("Max occupants for house: " + house.MaxOccupant(300));
-        Console.WriteLine("Max occupants for office: " + office.MaxOccupant(300));
+        Console.WriteLine("House Floors: " + house.Floors);
+        Console.WriteLine("Office Floors: " + office.Floors);
+
+        Console.WriteLine("House Area Per Person: " + house.AreaPerPerson());
+        Console.WriteLine("Office Area Per Person: " + office.AreaPerPerson());
+
+        Console.WriteLine("Max Occupants for House: " + house.MaxOccupant(300));
+        Console.WriteLine("Max Occupants for Office: " + office.MaxOccupant(300));
     }
 }
